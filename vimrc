@@ -6,6 +6,8 @@ inoremap { {<CR>}<ESC>kA<CR>
 inoremap " ""<ESC>i
 inoremap ' ''<ESC>i
 
+set relativenumber
+
 set nocompatible
 set number
 
