@@ -6,6 +6,9 @@ inoremap { {<CR>}<ESC>kA<CR>
 inoremap " ""<ESC>i
 inoremap ' ''<ESC>i
 
+autocmd InsertLeave * if pumvisible() == 0|pclose|endif
+autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
+
 set relativenumber
 
 set nocompatible
