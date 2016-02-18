@@ -42,7 +42,7 @@ set cindent
 syntax enable
 syntax on
 
-set t_Co=256
+set t_Co=8
 
 set ignorecase
 
