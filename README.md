@@ -1,1 +1,1 @@
-This is my vim config
+This is my precise config
