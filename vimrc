@@ -47,7 +47,7 @@ syntax on
 
 set t_Co=8
 
-set ignorecase
+set noignorecase
 
 set backspace=indent,eol,start
 
