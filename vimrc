@@ -8,6 +8,9 @@ inoremap ' ''<ESC>i
 
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
+    
+set wildmode=list,full
+set wildignorecase
 
 set relativenumber
 
@@ -15,20 +18,20 @@ set nocompatible
 set number
 
 set laststatus=1
-
+        
 set autoread
 
 set autowrite
 
 set foldenable
-
-set foldmethod=manual
-
+set foldmethod=marker
+    
 set cursorline
+
 set ruler
 
 set showcmd
-
+    
 set history=1000
 
 set nobackup
@@ -36,7 +39,7 @@ set noswapfile
 
 set showmatch
 
-set autoindent
+"set autoindent
 set cindent
 
 syntax enable
@@ -125,12 +128,12 @@ func SetTitle()
     
     autocmd BufNewFile * normal G
 endfunc
+
 "vundle config
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 Bundle 'gmarik/vundle'
-
 Bundle 'tpope/vim-fugitive'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
@@ -142,48 +145,30 @@ Bundle 'FuzzyFinder'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'bufexplorer.zip'
-
+Bundle 'terryma/vim-multiple-cursors'
 
 "taglist
 let Tlist_Compact_Format=1
-
 let Tlist_Use_Right_Window=1
-
 let Tlist_Show_One_File=1
-
 let Tlist_Auto_Highlight_tag=1
-
 let Tlist_Auto_Update=1
-
 let Tlist_WinWidth=30
-
 let Tlist_Exit_OnlyWindow=1 
-
 let Tlist_Use_SingClick=1
-
 nnoremap <silent> <F8> :TlistToggle<CR>
 
 "NERD_Tree
 let NERDChristmasTree=1
-
 let NERDTreeAutoCenter=1
-
 let NERDTreeQuitOnOpen=1
-
 let NERDTreeShowFiles=1
-
 let NERDTreeShowHidden=1
-
 let NERDTreeHightCursorline=1
-
 let NERDTreeShowLineNumbers=1
-
 let NERDTreeWinPos='left'
-
 let NERDTreeWinSize=31
-
 let NERDTreeMinimalUI=1
-
 nnoremap <silent> <F4> :NERDTreeToggle<CR>
 
 "YCM
@@ -209,8 +194,8 @@ let g:bufExplorerDefaultHelp=0 "Do not show default help.
 let g:bufExplorerShowRelativePath=1 "Show relative paths.
 let g:bufExplorerSortBy='mru' "Sort by most recently used.
 
-"vim-colors-solarized
-syntax enable
-set background=dark
-colorscheme solarized
+"vim-multiple-cursors
 
+"vim-colors-solarized
+set background=dark
+"colorscheme solarized
